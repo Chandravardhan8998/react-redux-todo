@@ -4,15 +4,7 @@ import TasksWIthInput from "../Components/TasksWIthInput";
 
 export default function Home() {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-      }}
-    >
+    <div className="d-flex fd-column jc-center ai-center full-height">
       <div
         style={{
           width: "30%",

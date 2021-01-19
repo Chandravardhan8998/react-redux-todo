@@ -16,27 +16,17 @@ export default function TasksWIthInput() {
     <div
       style={{
         height: "60vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        alignItems: "center",
       }}
-      className="border p-3"
+      className="border p-3 d-flex fd-column jc-start ai-center"
     >
       <Input />
       {Loading ? (
         <h1>Loading</h1>
       ) : (
         <div
-          // className="list-group list-group-flush container"
+          className="full-width full-width-p d-flex jc-start ai-center fd-column"
           style={{
-            width: "100%",
-            height: "100%",
             overflowY: "scroll",
-            display: "flex",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            flexDirection: "column",
           }}
         >
           {Tasks.map((task) => (

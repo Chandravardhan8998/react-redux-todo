@@ -23,8 +23,7 @@ export default function Input() {
       <div className="row">
         <div className="col-9">
           <input
-            style={{ width: "100%" }}
-            className="form-control"
+            className="form-control full-width"
             type="text"
             value={Value}
             placeholder="Enter Task"

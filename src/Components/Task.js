@@ -7,16 +7,12 @@ export default function Task({ task, done, id }) {
   return (
     <div
       className={`rounded  ${
-        done ? `border bg-success text-light` : `border border-secondary`
-      }`}
+        done
+          ? `border bg-success text-light fw-bold`
+          : `border border-secondary`
+      } p-relative d-flex fd-row jc-start ai-center m-1`}
       style={{
-        position: "relative",
         width: "94%",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "flex-start",
-        alignItems: "center",
-        margin: 5,
       }}
     >
       <div
@@ -24,36 +20,27 @@ export default function Task({ task, done, id }) {
           dispatch(Check ? doneTask(id) : undoneTask(id));
           setCheck(!Check);
         }}
+        className="t-center full-height-p p-2"
         style={{
-          textAlign: "left",
           flex: 10,
-          height: "100%",
-          textDecoration: done ? "line-through" : "none",
           verticalAlign: "center",
           fontSize: 18,
-          padding: 10,
         }}
       >
         {task}
       </div>
       {done && (
         <div
+          className="d-flex fd-row jc-center ai-center full-width full-height-p"
           style={{
-            display: "flex",
             flex: 2,
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            height: "100%",
           }}
         >
           <span
             style={{
               boxSizing: "border-box",
-              width: "100%",
               fontSize: 18,
-              cursor: "default",
+              cursor: "pointer",
             }}
             onClick={() => {
               if (done) {
@@ -61,7 +48,9 @@ export default function Task({ task, done, id }) {
                 console.log("delete");
               }
             }}
-            className="material-icons p-2 text-light text-center"
+            className="
+            full-width
+            material-icons p-2 text-light text-center"
           >
             delete
           </span>

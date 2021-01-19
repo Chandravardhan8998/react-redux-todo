@@ -17,18 +17,10 @@ export default function Counters() {
     setRemainTask(remainCount.length);
     setDoneTask(doneCount.length);
     dispatch({ type: FETCH_LENGTH_END });
-    // console.log(remainCount.length);
   }, [task, loading, dispatch]);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "stretch",
-      }}
-    >
+    <div className="d-flex fd-row jc-between ai-stretch">
       <Counter count={RemainTask} title="Remaining Tasks" />
       <Counter count={DoneTask} title="Completed Tasks" />
     </div>
